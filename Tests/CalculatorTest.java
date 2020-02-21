@@ -18,9 +18,11 @@ class CalculatorTest {
         assertEquals(myCalc.add(-2, 10), -2 + 10);
         assertEquals(myCalc.add(0, 40), 0 + 40);
         
-        assertEquals(myCalc.divide(1,  2), 1/2.0f);
-        assertEquals(myCalc.divide(5,  3), 5/3.0f);
-        assertEquals(myCalc.divide(-8,  2), -8/2.0f);
+        
+        assertEquals(myCalc.divide(1,  2), 1/2.0f, 0.0000001f);
+        assertEquals(myCalc.divide(5,  3), 5/3.0f, 0.0000001f);
+        assertEquals(myCalc.divide(-8,  2), -8/2.0f, 0.0000001f);
+        
         
         assertThrows(RuntimeException.class, () -> {
         	myCalc.divide(2, 0);
